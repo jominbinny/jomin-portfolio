@@ -1,5 +1,6 @@
 export const personalInfo = {
   name: "Jomin Binny",
+  firstName: "Jomin",
   role: "Full Stack Developer",
   tagline: "Backend-focused developer building scalable systems and real-world solutions",
   heroDescription:
@@ -10,12 +11,20 @@ export const personalInfo = {
   github: "https://github.com/jominbinny",
   linkedin: "https://linkedin.com/in/jominbinny",
   resumeUrl: "/Jomin_Binny_Resume.pdf",
+  status: "Available for opportunities",
 };
 
 export const aboutText = [
   "I'm a Computer Science undergraduate at the College of Engineering Vadakara with a strong academic foundation (CGPA 8.20) and a sharper focus on shipping real software.",
   "My core strength lies in backend architecture — building APIs, designing database schemas, and automating workflows using Node.js, Express, Flask, and MongoDB. I've delivered production websites for international clients as a freelance developer.",
   "Beyond code, I lead two of my college's largest technical communities — TinkerHub and IEDC — organizing hackathons, startup collaborations, and events that have reached thousands of students across Kerala.",
+];
+
+export const quickFacts = [
+  { label: "Education", value: "B.Tech CSE — CGPA 8.20" },
+  { label: "Focus", value: "Backend Systems & APIs" },
+  { label: "Location", value: "Ernakulam, India" },
+  { label: "Communities", value: "TinkerHub & IEDC Lead" },
 ];
 
 export const skills = {
@@ -26,13 +35,37 @@ export const skills = {
   Tools: ["Git", "Firebase", "REST APIs"],
 };
 
-export const projects = [
+export interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  impact: string;
+  problem: string;
+  approach: string;
+  implementation: string;
+  challenges: string;
+  result: string;
+  links?: { label: string; url: string }[];
+}
+
+export const projects: Project[] = [
   {
     title: "AI Virtual Assistant",
     description:
       "An intelligent voice-controlled assistant built with Python that leverages speech recognition and natural language processing to understand and execute system-level tasks through voice commands.",
     tech: ["Python", "NLP", "Speech Recognition"],
     impact: "Automated repetitive system operations through natural voice interaction",
+    problem:
+      "Manual system operations require repeated keyboard and mouse interactions, slowing down workflows. The goal was to create a hands-free alternative that could understand natural speech and execute commands.",
+    approach:
+      "Designed a modular pipeline: voice input → speech-to-text → NLP intent parsing → command execution. Used Python's speech recognition libraries and custom NLP logic to map natural language to system actions.",
+    implementation:
+      "Built with Python using speech recognition for audio capture, NLP for intent classification, and system APIs for command execution. The architecture separates input processing, intent parsing, and execution for maintainability.",
+    challenges:
+      "Handling noisy environments and ambiguous voice commands required implementing confidence thresholds and fallback confirmation prompts. Speech recognition accuracy in Indian English accents was a significant challenge.",
+    result:
+      "A working voice-controlled assistant that can execute system-level tasks, demonstrating the practical application of NLP in everyday automation.",
+    links: [],
   },
   {
     title: "Travel Guide App",
@@ -40,6 +73,17 @@ export const projects = [
       "A location-aware web application built during a hackathon that helps travelers discover destinations, find parking, and navigate Kozhikode using integrated mapping and location APIs.",
     tech: ["React", "Location APIs", "Maps Integration"],
     impact: "Built and shipped in 24 hours during a competitive hackathon",
+    problem:
+      "Travelers in Kozhikode lack a centralized platform to discover local destinations, find parking, and navigate efficiently. Existing map apps don't cater to local tourism needs.",
+    approach:
+      "Built a location-aware React application that integrates mapping APIs to show nearby attractions, parking spots, and navigation routes. Prioritized real-time location data and a clean, mobile-first interface.",
+    implementation:
+      "Developed using React with integrated mapping and location APIs. Implemented geolocation services for real-time positioning, custom markers for points of interest, and a responsive UI designed for on-the-go usage.",
+    challenges:
+      "Working within 24 hours required ruthless prioritization. API rate limits and mapping service integration under time pressure forced creative solutions for caching and fallback data.",
+    result:
+      "A functional travel companion app that helps users explore Kozhikode with real-time location features, built and deployed within a hackathon timeframe.",
+    links: [],
   },
   {
     title: "College Enquiry IVR System",
@@ -47,6 +91,17 @@ export const projects = [
       "An automated phone-based enquiry system that uses speech-to-text and NLP to handle student queries, integrated with Firebase for real-time verification and instant response delivery.",
     tech: ["NLP", "Firebase", "Speech-to-Text"],
     impact: "Automated query handling for an entire college department",
+    problem:
+      "College departments spend significant time answering repetitive phone inquiries about admissions, schedules, and results. This manual process creates bottlenecks and long wait times for students.",
+    approach:
+      "Designed an Interactive Voice Response system that converts speech to text, classifies the query type using NLP, and retrieves answers from a Firebase database. The system handles common queries automatically and escalates complex ones.",
+    implementation:
+      "Built using speech-to-text for voice input processing, NLP for query classification, and Firebase for real-time data storage and retrieval. The system provides instant responses for pre-configured query categories.",
+    challenges:
+      "Speech-to-text accuracy for phone-quality audio required custom preprocessing. Designed a fallback system for queries the NLP couldn't classify with sufficient confidence.",
+    result:
+      "An automated phone enquiry system that handles the majority of student queries without human intervention, reducing department workload and improving response times.",
+    links: [],
   },
 ];
 
@@ -111,9 +166,7 @@ export const leadership = [
 
 export const navItems = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Leadership", href: "#leadership" },
+  { label: "Work", href: "#projects" },
+  { label: "Stack", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
