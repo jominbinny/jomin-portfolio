@@ -37,7 +37,7 @@ function ProjectCard({
           </span>
           <div className="flex-1">
             <h3 className="font-heading text-lg font-bold text-foreground">{project.title}</h3>
-            <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+            <p className="mt-1 font-content text-sm text-muted-foreground line-clamp-2">{project.description}</p>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 45 : 0 }}
@@ -129,7 +129,7 @@ function CaseStudyBlock({
         {title}
       </span>
       <p
-        className={`text-sm leading-relaxed ${
+        className={`font-content text-sm leading-relaxed ${
           highlight
             ? "rounded-lg bg-primary/5 px-4 py-3 text-foreground font-medium"
             : "text-muted-foreground"
@@ -146,7 +146,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="section-padding px-6">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-4xl content-wrap">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,13 +154,10 @@ export function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            03 — Work
-          </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             Things I've built
           </h2>
-          <p className="mt-4 max-w-lg text-muted-foreground">
+          <p className="mt-4 max-w-lg font-content text-muted-foreground">
             From hackathon prototypes to production systems — each project solves a real problem.
           </p>
         </motion.div>

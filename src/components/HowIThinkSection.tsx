@@ -44,10 +44,7 @@ export function HowIThinkSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            02 — Process
-          </span>
-          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="font-heading text-[1.25rem] tracking-wide text-foreground sm:text-[1.5rem] md:text-[1.75rem]">
             How I think
           </h2>
           <p className="mt-4 max-w-lg text-muted-foreground">
@@ -85,7 +82,7 @@ export function HowIThinkSection() {
                       {step.label}
                     </span>
                   </div>
-                  <p className="mt-1 text-sm text-muted-foreground">{step.description}</p>
+                  <p className="mt-1 font-content text-sm text-muted-foreground">{step.description}</p>
                 </div>
 
                 {/* Empty space for other side */}

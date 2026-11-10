@@ -4,7 +4,7 @@ import { skills } from "@/lib/data";
 export function SkillsSection() {
   return (
     <section id="skills" className="section-padding px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl content-wrap">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -12,9 +12,6 @@ export function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            04 — Stack
-          </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             Technologies I work with
           </h2>

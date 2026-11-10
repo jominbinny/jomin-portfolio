@@ -20,64 +20,15 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            07 — Contact
-          </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             Let's work together
           </h2>
-          <p className="mt-4 max-w-lg text-muted-foreground">
+          <p className="mt-4 max-w-lg font-content text-muted-foreground">
             Have a project in mind or just want to connect? Reach out.
           </p>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2">
-          {/* Contact links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <div className="space-y-4">
-              {[
-                {
-                  label: "Email",
-                  value: personalInfo.email,
-                  href: `mailto:${personalInfo.email}`,
-                },
-                {
-                  label: "GitHub",
-                  value: "github.com/jominbinny",
-                  href: personalInfo.github,
-                },
-                {
-                  label: "LinkedIn",
-                  value: "linkedin.com/in/jominbinny",
-                  href: personalInfo.linkedin,
-                },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-xl border border-border bg-card/50 p-4 backdrop-blur-sm transition-all hover:border-primary/20 hover:bg-card"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 font-mono text-xs font-bold text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    {link.label[0]}
-                  </div>
-                  <div>
-                    <div className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-                      {link.label}
-                    </div>
-                    <div className="text-sm font-medium text-foreground">{link.value}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </motion.div>
-
+        <div className="mx-auto max-w-4xl content-wrap">
           {/* Contact form */}
           <motion.form
             initial={{ opacity: 0, y: 20 }}

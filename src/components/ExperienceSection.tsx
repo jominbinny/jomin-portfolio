@@ -4,7 +4,7 @@ import { experience } from "@/lib/data";
 export function ExperienceSection() {
   return (
     <section id="experience" className="section-padding px-6">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-4xl content-wrap">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -12,9 +12,6 @@ export function ExperienceSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            05 — Experience
-          </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             Where I've worked
           </h2>
@@ -53,7 +50,7 @@ export function ExperienceSection() {
                       {exp.company}
                     </h3>
                     <p className="mb-2 font-mono text-xs text-muted-foreground">{exp.role}</p>
-                    <p className="mb-3 text-sm text-muted-foreground">{exp.description}</p>
+                    <p className="mb-3 font-content text-sm text-muted-foreground">{exp.description}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {exp.highlights.map((h) => (
                         <span

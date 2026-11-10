@@ -7,10 +7,14 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { LeadershipSection } from "@/components/LeadershipSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import { GlyphMatrixBackground } from "@/components/GlyphMatrixBackground";
+import { Pattern } from "@/components/Pattern";
 
 function Portfolio() {
   return (
     <>
+      <Pattern />
+      <GlyphMatrixBackground />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
