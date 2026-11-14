@@ -4,7 +4,7 @@ import { leadership } from "@/lib/data";
 export function LeadershipSection() {
   return (
     <section id="leadership" className="section-padding px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl content-wrap">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -12,10 +12,7 @@ export function LeadershipSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="mb-3 block font-mono text-xs uppercase tracking-[0.2em] text-primary">
-            06 — Community
-          </span>
-          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="font-heading text-[1.25rem] tracking-wide text-foreground sm:text-[1.5rem] md:text-[1.75rem]">
             Building communities, not just code
           </h2>
           <p className="mt-4 max-w-lg text-muted-foreground">
@@ -38,7 +35,7 @@ export function LeadershipSection() {
                 <h3 className="mb-2 font-heading text-base font-bold text-foreground">
                   {item.title}
                 </h3>
-                <p className="mb-4 text-sm text-muted-foreground">{item.description}</p>
+                <p className="mb-4 font-content text-sm text-muted-foreground">{item.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {item.stats.map((stat) => (
                     <span

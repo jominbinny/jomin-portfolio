@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Jomin Binny",
   firstName: "Jomin",
-  role: "Full Stack Developer",
+  role: "Python Developer",
   tagline: "Backend-focused developer building scalable systems and real-world solutions",
   heroDescription:
     "I architect robust backend systems with Node.js and Python, craft seamless user experiences with React, and bring ideas to production — from hackathon prototypes to client-facing products.",

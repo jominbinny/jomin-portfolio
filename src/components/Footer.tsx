@@ -10,7 +10,7 @@ export function Footer() {
             <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               You made it to the end
             </p>
-            <h2 className="footer-title font-pixel text-[clamp(2rem,7vw,5.5rem)]">
+            <h2 className="footer-title font-pixel text-[clamp(1.5rem,5vw,3.5rem)]">
               ENOUGH SCROLLING.
               <br />
               <span>TOUCH SOME GRASS.</span>

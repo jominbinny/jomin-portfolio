@@ -44,7 +44,6 @@ export function Navbar() {
             <path d="M3 10c0-3.7 3-6.7 6.7-6.7h7.6c3.7 0 6.7 3 6.7 6.7s-3 6.7-6.7 6.7H9.7C6 16.7 3 13.7 3 10Z" />
             <path d="M1 10c0-2.2 1.8-4 4-4h10.3c2.2 0 4 1.8 4 4s-1.8 4-4 4H5c-2.2 0-4-1.8-4-4Z" />
           </svg>
-          <span>Jomin</span>
         </button>
 
         <div className="reference-navbar__links hidden items-center md:flex">
